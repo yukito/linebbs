@@ -4,4 +4,6 @@ class Board < ActiveRecord::Base
   has_many :posts
   belongs_to :user
 
+  validates :title, :user_id, presence: true
+
 end

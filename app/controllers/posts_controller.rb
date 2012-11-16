@@ -23,6 +23,8 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
+        @board = @post.board
+        format.js
         format.html { redirect_to board_path(@post.board.id), notice: 'Post was successfully created.' }
         format.json { render json: @post, status: :created, location: @post }
       else

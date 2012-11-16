@@ -3,5 +3,6 @@ class Post < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :board
+  validates :user_id, :body, :board_id, presence: true
 
 end

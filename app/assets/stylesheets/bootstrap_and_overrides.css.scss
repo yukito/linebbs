@@ -27,3 +27,6 @@ $iconWhiteSpritePath: asset-path("bootstrap/glyphicons-halflings-white", image);
 //
 // Example:
 // $linkColor: #ff0000;
+ul, ol{
+  list-style: none;
+}
