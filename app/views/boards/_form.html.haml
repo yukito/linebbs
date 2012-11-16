@@ -1,0 +1,11 @@
+=current_user.id
+= form_for @board, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :title, :class => 'control-label'
+    .controls
+      = f.text_field :title, :class => 'text_field input-xlarge'
+      = f.hidden_field :user_id, value: current_user.id
+
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), boards_path, :class => 'btn'
